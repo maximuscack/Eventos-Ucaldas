@@ -27,7 +27,7 @@ jobs:
           cache: 'npm'  # Cambia a 'pnpm' si usas pnpm
 
       - name: Install dependencies
-        run: npm ci  # Si usas pnpm: corepack enable && pnpm install --frozen-lockfile
+        run: corepack enable && pnpm install --frozen-lockfile
 
       - name: Build Static Site
         run: npm run build
